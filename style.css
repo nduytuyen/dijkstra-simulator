@@ -1,0 +1,70 @@
+body { 
+    font-family: 'Segoe UI', Tahoma, sans-serif; 
+    display: flex; flex-direction: column; align-items: center; 
+    background: #1e1e2e; color: #cdd6f4; margin: 0; padding: 20px; 
+}
+
+.academic-header { 
+    display: flex; align-items: center; background: #181825; padding: 20px 40px; 
+    border-radius: 12px; border: 1px solid #313244; width: 1120px; margin-bottom: 20px; gap: 30px; 
+}
+.logo-container { background: #fff; padding: 8px; border-radius: 50%; width: 100px; height: 100px; display: flex; justify-content: center; align-items: center; }
+.hcmut-logo { width: 85px; height: auto; }
+.subject-title { color: #89b4fa; margin: 5px 0; font-size: 20px; text-transform: uppercase; }
+.project-title { color: #f5c2e7; margin: 0 0 10px 0; font-size: 16px; }
+
+.panel-container { display: flex; gap: 20px; width: 1200px; margin-bottom: 20px; }
+.control-panel { background: #181825; padding: 15px; border-radius: 10px; border: 1px solid #313244; flex: 1; }
+.input-group { display: flex; gap: 8px; margin-bottom: 12px; align-items: center; }
+.input-group-row { margin-bottom: 10px; font-size: 14px; }
+h3 { color: #f5c2e7; margin-top: 0; font-size: 16px; border-bottom: 1px solid #45475a; padding-bottom: 5px; }
+
+button { padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; transition: 0.2s; font-size: 13px; }
+.btn-blue { background: #89b4fa; color: #11111b; }
+.btn-green { background: #a6e3a1; color: #11111b; }
+.btn-red { background: #f38ba8; color: #11111b; width: 100%; margin-top: 5px; }
+.btn-red-outline { background: transparent; border: 1px solid #f38ba8; color: #f38ba8; }
+.btn-run { background: #f9e2af; color: #11111b; width: 100%; padding: 12px; font-size: 15px; margin-bottom: 10px;}
+
+#result { padding: 10px; background: #11111b; border-radius: 5px; border-left: 4px solid #89b4fa; font-weight: bold; color: #89b4fa; font-size: 16px;}
+
+.main-display { display: flex; gap: 20px; width: 1200px; height: 550px; align-items: stretch; }
+#mynetwork { flex: 3; background: #11111b; border-radius: 10px; border: 2px solid #89b4fa; }
+
+.log-panel { flex: 2; background: #181825; border-radius: 10px; border: 1px solid #313244; padding: 15px; display: flex; flex-direction: column; }
+#logContent { overflow-y: auto; padding-right: 10px; color: #bac2de; line-height: 1.6; }
+
+/* Tiêu đề chính to ra */
+.main-log-title {
+    color: #f5c2e7;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #f5c2e7;
+    padding-bottom: 8px;
+    margin: 25px 0 15px 0;
+}
+
+.log-step { margin-bottom: 20px; border-left: 4px solid #89b4fa; padding-left: 15px; font-size: 15px; }
+.step-title { color: #89b4fa; font-weight: bold; font-size: 17px; margin-bottom: 8px; display: block; }
+
+/* Bảng nhãn trong ngoặc {} */
+.math-array { 
+    display: block; margin: 15px 0; font-family: 'Consolas', 'Courier New', monospace; 
+    color: #a6e3a1; font-size: 18px; background: #11111b; padding: 12px; 
+    border-radius: 8px; text-align: center; border: 1px solid #45475a;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.highlight-val { color: #a6e3a1; font-weight: bold; }
+.highlight-node { color: #f5c2e7; font-weight: bold; background: #313244; padding: 2px 6px; border-radius: 4px;}
+
+/* Truy vết chi tiết */
+.trace-detail {
+    background: #24273a;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-size: 14px;
+    border-left: 3px solid #f38ba8;
+}

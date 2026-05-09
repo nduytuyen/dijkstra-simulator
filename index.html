@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTL Kỹ thuật ra quyết định - Dijkstra Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
+</head>
+<body>
+
+    <div class="academic-header">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Bách Khoa" class="hcmut-logo">
+        </div>
+        <div class="info-container">
+            <h4>ĐẠI HỌC QUỐC GIA TP.HỒ CHÍ MINH</h4>
+            <h4>TRƯỜNG ĐẠI HỌC BÁCH KHOA</h4>
+            <h1 class="subject-title">BÀI TẬP LỚN MÔN KỸ THUẬT RA QUYẾT ĐỊNH</h1>
+            <h2 class="project-title">Đề tài: Web Mô phỏng Thuật toán Dijkstra</h2>
+            
+            <div class="student-info">
+                <p><strong>Giảng viên hướng dẫn:</strong> ThS. Hồ Thanh Phương</p>
+                <p><strong>Sinh viên thực hiện:</strong> Nguyễn Duy Tuyên</p>
+                <p><strong>MSSV:</strong> 2213821 &nbsp;&nbsp;|&nbsp;&nbsp; <strong>Lớp:</strong> L02</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="panel-container">
+        <div class="control-panel">
+            <h3>🛠️ Xây dựng đồ thị</h3>
+            <div class="input-group-row">
+                <input type="checkbox" id="isDirected" onchange="toggleDirected()">
+                <label for="isDirected">☑️ Đồ thị có hướng</label>
+            </div>
+            
+            <div class="input-group random-group">
+                <label>Số nút:</label>
+                <input type="number" id="randomNodeCount" value="6" min="2" max="20" style="width: 50px;">
+                <button onclick="generateRandomGraph()" class="btn-blue">🎲 Tạo ngẫu nhiên</button>
+            </div>
+
+            <div class="input-group">
+                <button onclick="addNode()" class="btn-blue">➕ Thêm Nút</button>
+                <button onclick="deleteSelectedNode()" class="btn-red-outline">✂️ Xóa Nút</button>
+            </div>
+            <div class="input-group">
+                <label>Từ:</label>
+                <select id="edgeFrom"></select>
+                <label>Đến:</label>
+                <select id="edgeTo"></select>
+                <label>Trọng số:</label>
+                <input type="number" id="edgeWeight" value="1" min="0" style="width: 50px;">
+                <button onclick="addEdge()" class="btn-green">Nối cạnh</button>
+            </div>
+            <button onclick="clearGraph()" class="btn-red">🗑️ Xóa sạch đồ thị</button>
+        </div>
+
+        <div class="control-panel">
+            <h3>🚀 Điều khiển</h3>
+            <div class="input-group">
+                <label>Nút nguồn:</label>
+                <select id="startNode"></select>
+                <label>Nút đích:</label>
+                <select id="endNode"></select>
+            </div>
+            <button onclick="runDijkstra()" class="btn-run">TÌM ĐƯỜNG ĐI NGẮN NHẤT</button>
+            <div id="result">Kết quả lộ trình...</div>
+        </div>
+    </div>
+
+    <div class="main-display">
+        <div id="mynetwork"></div>
+        <div class="log-panel">
+            <div id="logContent">Vui lòng xây dựng đồ thị và bấm Tìm đường đi!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
